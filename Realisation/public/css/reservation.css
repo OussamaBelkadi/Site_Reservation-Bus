@@ -1,0 +1,351 @@
+.light-theme {
+
+  /**
+   * light theme colors 
+   */
+
+  --background-primary: hsl(0, 0%, 100%);
+  --background-secondary: hsl(0, 0%, 97%);
+
+  --action-primary: hsl(214, 32%, 91%);
+  --action-secondary: hsl(210, 38%, 95%);
+
+  --foreground-primary: hsl(218, 23%, 23%);
+  --foreground-secondary: hsl(216, 15%, 52%);
+  --foreground-tertiary: hsl(214, 20%, 69%);
+
+  --accent: hsl(229, 76%, 66%);
+
+}
+
+.dark-theme {
+
+  /**
+   * dark theme colors 
+   */
+
+  --background-primary: hsl(218, 23%, 23%);
+  --background-secondary: hsl(220, 26%, 14%);
+
+  --action-primary: hsl(216, 15%, 52%);
+  --action-secondary: hsl(218, 23%, 23%);
+
+  --foreground-primary: hsl(210, 38%, 95%);
+  --foreground-secondary: hsl(211, 25%, 84%);
+  --foreground-tertiary: hsl(214, 20%, 69%);
+
+  --accent: hsl(229, 76%, 66%);
+
+}
+
+:root {
+
+  /**
+   * color
+   */
+
+  --white: hsl(0, 0%, 100%);
+
+  /**
+   * typography 
+   */
+
+  --fs-base: 0.85rem;
+  --fs-1: 1.875rem;
+  --fs-2: 1.5rem;
+  --fs-3: 1.25rem;
+  --fs-4: 0.875rem;
+  --fs-5: 0.75rem;
+
+  /**
+   * spacing 
+   */
+
+  --py: 5rem;
+
+    --color-primary: #973888;
+    --color-primary-light: hsl(242,91%, 69%, 18%);
+    --color-primary-variant: #A867B8;
+    --color-red-light: hsl(346, 84%, 46%, 15%);
+    --color-green: #00c476;
+    --color-green-light: hsl(156, 100%, 38%,15%);
+    --color-gray-900: #1e1e66;
+    --color-gray-700: #2d2d7c;
+    --color-gray-300: rgba(242, 242, 254, 0.3);
+    --color-gray-200: rgba(242, 242, 254, 0.7);
+    --color-white: #f2f2fe;
+    --color-bg: #0f0f3e;
+    --color-black: #000;
+
+    --transsition: all 300ms ease;
+    --container-width-lg: 74%;
+    --container-width-md: 88%;
+    --form-width: 40;
+}
+.page_acueil{
+  position: relative;
+  height: 70vh;
+  background: url("/image/reser_accueil.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.top{
+  color: azure;
+  position:absolute;
+  top:10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+ul{
+  margin-top: 8px;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
+li > a{
+  color: var(--color-white);
+  margin-right: 20px;
+  text-decoration: none;
+}
+/* form of search */
+.form_search{
+  margin-top: -60px;
+  margin-bottom: 245px;
+  z-index: 2;
+  height: 50px;
+}
+/**
+ * MAIN 
+ */
+
+ .main .container {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  gap: 60px;
+}
+
+.blog-card {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 10px;
+  background: var(--background-primary);
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.05);
+  transition: 0.25s ease;
+  height: 394px;
+  object-fit: cover;
+}
+.blog-card-banner{
+  height: 100%;
+  width: 200px;
+}
+.blog-banner-img {
+  width: 100%;
+  height: 383px;
+  object-fit: cover;
+}
+
+.blog-topic {
+  background: var(--action-secondary);
+  color: var(--foreground-secondary);
+  font-weight: 600;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.blog-card .h3 {
+line-height: 1.4;
+margin-bottom: 1rem;
+}
+.h3 {
+font-size: var(--fs-3);
+font-weight: 700;
+}
+.h1, .h2, .h3, .h4 {
+display: block;
+color: var(--foreground-primary);
+text-decoration: none;
+
+}
+.blog-content{
+  display: flex;
+  justify-content: space-between;
+}
+.left-corner {
+  width: 100px;
+  position: relative;
+}
+.left-corner::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background: var(--color-black);
+  top: 12px;
+  left: 45px;
+  height: 1px;
+  width: 114px;
+}
+
+.right-content{
+  width: 140px;
+  position: relative;
+}
+.right-content::before{
+  content: " ";
+  position: absolute;
+  display: block;
+  background: var(--color-black);
+  top: 12px;
+  right: 144px;
+  height: 1px;
+  width: 61px;
+}
+
+/* .blog-text {
+color: var(--foreground-secondary);
+font-size: var(--fs-4);
+display: -webkit-box;
+line-clamp: 3;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+overflow: hidden;
+margin-bottom: 3rem;
+
+} */
+
+.blog .wrapper-flex {
+display: flex;
+justify-content: start;
+align-items: center;
+gap: 20px;
+}
+
+.blog .wrapper {
+display: flex;
+flex-direction: column;
+align-items: start;
+gap: 0;
+height: 114px;
+}
+
+.profile-wrapper {
+margin-bottom: -12px;
+width: 60px;
+height: 60px;
+background: var(--action-primary);
+padding: 3px;
+border-radius: 50%;
+}
+.profile-wrapper img {
+border-radius: 50%;
+}
+
+/* reserve-btn */
+.reserve-btn{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 134px;
+}
+.reserve-btn::after{
+  position: absolute;
+  content: " ";
+  display: block;
+  height: 344px;
+  width: 2px;
+  background-color: var(--color-black);
+  top: 30px;
+  right: 133px;
+}
+
+.reserve-prix{
+  font-size: bold;
+  
+}
+.btn-reserve{
+  width: 100%;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+}
+@media (max-width: 600px) {
+  /* Blog content */
+  .form_search {
+    margin-top: -60px;
+    margin-bottom: 414px;
+    z-index: 2;
+    height: 50px;
+  }
+  .main .container{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .blog{
+    min-height: 954px;
+  }
+  .blog-card{
+    grid-template-columns: 1fr;
+    height: 780px;
+  }
+  .left-corner::after {
+    display: none;
+  }
+  .center-content{
+    display: none;
+  }
+  .right-content::before{
+    display: none;
+  }
+  .reserve-btn::after {
+    display: none;
+  }
+  .blog-card-banner {
+    height: 100%;
+    width: 313px;
+  }
+  .reserve-btn {
+    gap: 9px;
+  }
+  .reserve-btn {
+    align-items: self-start;
+    justify-content: flex-start;
+  }
+  .reserve-btn::after {
+    display: none;
+  }
+  
+  /* Rerservation de ticket */
+  .reserve-operasion{
+    flex-direction: column-reverse;
+    /* gap: 450px; */
+    margin: 50px 0;
+    min-height: 600px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .context-right{
+    min-width: 304px;
+  }
+  .img_bus{
+    width: 304px;
+  }
+  .voyage-content {
+    gap: 61px;
+  }
+  .header-text {
+    margin: 2px 0 12px 6px;
+  }
+  .reservation{
+    display: flex;
+    gap: 10px;
+  }
+}

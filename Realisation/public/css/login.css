@@ -1,0 +1,16 @@
+.oblique {
+    transform: skewX(-10deg);
+    overflow: hidden;
+    width: 60%;
+    right: -10rem;
+    border-bottom-left-radius: 0.75rem;
+}
+.corner_bgn{
+    background-image: url('../image/curved6.jpg');
+}
+.main-content{
+    margin: 60px;
+}
+.btn-auth{
+    background-image: linear-gradient(310deg,#2152ff,#21d4fd);
+}

@@ -1,0 +1,356 @@
+:root {
+  
+  /**
+   * color
+   */
+
+  --white: hsl(0, 0%, 100%);
+
+  /**
+   * typography 
+   */
+
+  --fs-base: 0.85rem;
+  --fs-1: 1.875rem;
+  --fs-2: 1.5rem;
+  --fs-3: 1.25rem;
+  --fs-4: 0.875rem;
+  --fs-5: 0.75rem;
+
+  /**
+   * spacing 
+   */
+
+  --py: 5rem;
+
+    --color-primary: #973888;
+    --color-primary-light: hsl(242,91%, 69%, 18%);
+    --color-primary-variant: #A867B8;
+    --color-red-light: hsl(346, 84%, 46%, 15%);
+    --color-green: #00c476;
+    --color-green-light: hsl(156, 100%, 38%,15%);
+    --color-gray-900: #1e1e66;
+    --color-gray-700: #2d2d7c;
+    --color-gray-300: rgba(242, 242, 254, 0.3);
+    --color-gray-200: rgba(242, 242, 254, 0.7);
+    --color-white: #f2f2fe;
+    --color-bg: #0f0f3e;
+    --color-black: #000;
+
+    --transsition: all 300ms ease;
+    --container-width-lg: 74%;
+    --container-width-md: 88%;
+    --form-width: 40;
+}
+.page_acueil{
+  position: relative;
+  height: 70vh;
+  background: url("image/reser_accueil.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.top{
+  color: azure;
+  position:absolute;
+  top:10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/**
+ * MAIN 
+ */
+
+ .main  {
+  /* display: grid;
+  grid-template-columns: 6fr 1fr; */
+  width: 100%;
+  gap: 60px;
+}
+.nom-voyage{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--color-primary);
+  margin-bottom: 40px;
+}
+.blog-card {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 10px;
+  background: var(--background-primary);
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  /* box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.05); */
+  transition: 0.25s ease;
+  height: 394px;
+  object-fit: cover;
+}
+.blog-card-banner{
+  height: 100%;
+  width: 200px;
+}
+.blog-banner-img {
+  width: 100%;
+  height: 383px;
+  object-fit: cover;
+}
+
+.blog-topic {
+  background: var(--action-secondary);
+  color: var(--foreground-secondary);
+  font-weight: 600;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.blog-card .h3 {
+line-height: 1.4;
+margin-bottom: 1rem;
+}
+.h3 {
+font-size: var(--fs-3);
+font-weight: 700;
+}
+.h1, .h2, .h3, .h4 {
+display: block;
+color: var(--foreground-primary);
+text-decoration: none;
+
+}
+.blog-content{
+  display: flex;
+  justify-content: space-between;
+}
+.left-corner {
+  width: 100px;
+  position: relative;
+}
+.left-corner::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background: var(--color-black);
+  top: 12px;
+  left: 45px;
+  height: 1px;
+  width: 114px;
+}
+
+.right-content{
+  width: 140px;
+  position: relative;
+}
+.right-content::before{
+  content: " ";
+  position: absolute;
+  display: block;
+  background: var(--color-black);
+  top: 12px;
+  right: 144px;
+  height: 1px;
+  width: 61px;
+}
+
+.blog .wrapper-flex {
+display: flex;
+justify-content: start;
+align-items: center;
+gap: 20px;
+}
+
+.blog .wrapper {
+display: flex;
+flex-direction: column;
+align-items: start;
+gap: 0;
+height: 114px;
+}
+
+.profile-wrapper {
+margin-bottom: -12px;
+width: 60px;
+height: 60px;
+background: var(--action-primary);
+padding: 3px;
+border-radius: 50%;
+}
+.profile-wrapper img {
+border-radius: 50%;
+}
+
+/* reserve-btn */
+.reserve-btn{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 134px;
+}
+.reserve-btn::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  height: 352px;
+  width: 2px;
+  background-color: var(--color-black);
+  top: 30px;
+  right: 175px;
+}
+
+.reserve-prix{
+  font-size: bold;
+  
+}
+.btn-reserve{
+  width: 100%;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+}
+/*  reserve-operasion */
+.reserve-operasion{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 50px 0;
+  min-height: 600px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.context-left{
+  max-width: 555px;
+}
+.header-text{
+margin: 40px 0 40px 40px;
+}
+.body-text{
+margin: 40px 0 40px 40px;
+}
+.destination{
+margin-left: 40px;
+background: var(--color-primary-variant);
+border-radius: 10px;
+box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.05);
+color: var(--color-white);
+width: 141px;
+text-align: center;
+}
+.place{
+display: flex;
+gap: 12px;
+margin: 20px 0;
+}
+.chair{
+width: 20px;
+height: 23px;
+}
+.context-right {
+  margin: auto 0;
+  min-width: 582px;
+  max-width: 678px;
+  height: 100%;
+  text-align: center;
+  background: #EDEDED;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.05);   
+}
+.btn-reserve{
+width: 103px;
+height: 31px;
+left: 132px;
+top: 1216px;
+background: #602265;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+}
+.btn-enable{
+width: 103px;
+height: 31px;
+left: 132px;
+top: 1216px;
+background: #cfcecf; 
+color: var(--color-primary);
+border: none;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+}
+.img_bus{
+width: 528px;
+height: 480px;
+margin: 20px auto ;
+}
+.voyage-content{
+display: flex;
+justify-content: center;
+gap: 223px;
+color: var(--color-black);
+}
+.fa-chair.reserved {
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px;
+}
+@media (max-width: 600px) {
+/* Blog content */
+.blog{
+  min-height: 954px;
+}
+.blog-card{
+  grid-template-columns: 0fr;
+  height: 780px;
+}
+.left-corner::after {
+  display: none;
+}
+.center-content{
+  display: none;
+}
+.right-content::before{
+  display: none;
+}
+.reserve-btn::after {
+  display: none;
+}
+.reserve-btn {
+  gap: 9px;
+}
+.reserve-btn {
+  align-items: self-start;
+  justify-content: flex-start;
+}
+.reserve-btn::after {
+  display: none;
+}
+
+/* Rerservation de ticket */
+.reserve-operasion{
+  flex-direction: column-reverse;
+  /* gap: 450px; */
+  margin: 50px 0;
+  min-height: 600px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.context-right{
+  min-width: 304px;
+}
+.img_bus{
+  width: 304px;
+}
+.voyage-content {
+  gap: 61px;
+}
+.header-text {
+  margin: 2px 0 12px 6px;
+}
+.reservation{
+  display: flex;
+  gap: 10px;
+}
+}
